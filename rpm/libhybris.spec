@@ -12,6 +12,9 @@ BuildRequires: pkgconfig(wayland-client)
 # When droid-hal-ha builds for a specific HA it should provide
 # droid-hal-devel via droid-hal-%%{device}-devel package
 BuildRequires: droid-hal-devel
+%if 0%{?fedora}
+BuildRequires: libstdc++-static
+%endif
 Conflicts: mesa-llvmpipe
 
 %description
